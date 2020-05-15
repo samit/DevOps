@@ -1,0 +1,268 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 May12 ?        00:00:13 /sbin/init splash
+root           2       0  0 May12 ?        00:00:00 [kthreadd]
+root           3       2  0 May12 ?        00:00:00 [rcu_gp]
+root           4       2  0 May12 ?        00:00:00 [rcu_par_gp]
+root           9       2  0 May12 ?        00:00:00 [mm_percpu_wq]
+root          10       2  0 May12 ?        00:00:04 [ksoftirqd/0]
+root          11       2  0 May12 ?        00:03:36 [rcu_sched]
+root          12       2  0 May12 ?        00:00:00 [migration/0]
+root          13       2  0 May12 ?        00:00:00 [idle_inject/0]
+root          14       2  0 May12 ?        00:00:00 [cpuhp/0]
+root          15       2  0 May12 ?        00:00:00 [cpuhp/1]
+root          16       2  0 May12 ?        00:00:00 [idle_inject/1]
+root          17       2  0 May12 ?        00:00:00 [migration/1]
+root          18       2  0 May12 ?        00:00:08 [ksoftirqd/1]
+root          21       2  0 May12 ?        00:00:00 [cpuhp/2]
+root          22       2  0 May12 ?        00:00:00 [idle_inject/2]
+root          23       2  0 May12 ?        00:00:00 [migration/2]
+root          24       2  0 May12 ?        00:00:03 [ksoftirqd/2]
+root          27       2  0 May12 ?        00:00:00 [cpuhp/3]
+root          28       2  0 May12 ?        00:00:00 [idle_inject/3]
+root          29       2  0 May12 ?        00:00:01 [migration/3]
+root          30       2  0 May12 ?        00:00:03 [ksoftirqd/3]
+root          33       2  0 May12 ?        00:00:00 [kdevtmpfs]
+root          34       2  0 May12 ?        00:00:00 [netns]
+root          35       2  0 May12 ?        00:00:00 [rcu_tasks_kthre]
+root          36       2  0 May12 ?        00:00:00 [kauditd]
+root          38       2  0 May12 ?        00:00:00 [khungtaskd]
+root          39       2  0 May12 ?        00:00:00 [oom_reaper]
+root          40       2  0 May12 ?        00:00:00 [writeback]
+root          41       2  0 May12 ?        00:00:01 [kcompactd0]
+root          42       2  0 May12 ?        00:00:00 [ksmd]
+root          43       2  0 May12 ?        00:00:00 [khugepaged]
+root         136       2  0 May12 ?        00:00:00 [kintegrityd]
+root         137       2  0 May12 ?        00:00:00 [kblockd]
+root         138       2  0 May12 ?        00:00:00 [blkcg_punt_bio]
+root         140       2  0 May12 ?        00:00:00 [tpm_dev_wq]
+root         141       2  0 May12 ?        00:00:00 [ata_sff]
+root         142       2  0 May12 ?        00:00:00 [md]
+root         143       2  0 May12 ?        00:00:00 [edac-poller]
+root         144       2  0 May12 ?        00:00:00 [devfreq_wq]
+root         146       2  0 May12 ?        00:00:00 [watchdogd]
+root         149       2  0 May12 ?        00:03:35 [kswapd0]
+root         150       2  0 May12 ?        00:00:00 [ecryptfs-kthrea]
+root         153       2  0 May12 ?        00:00:00 [kthrotld]
+root         154       2  0 May12 ?        00:00:00 [irq/122-aerdrv]
+root         155       2  0 May12 ?        00:00:00 [irq/123-aerdrv]
+root         156       2  0 May12 ?        00:00:00 [acpi_thermal_pm]
+root         157       2  0 May12 ?        00:00:00 [vfio-irqfd-clea]
+root         160       2  0 May12 ?        00:00:00 [ipv6_addrconf]
+root         171       2  0 May12 ?        00:00:00 [kstrp]
+root         194       2  0 May12 ?        00:00:00 [charger_manager]
+root         242       2  0 May12 ?        00:00:00 [cryptd]
+root         246       2  0 May12 ?        00:00:00 [scsi_eh_0]
+root         247       2  0 May12 ?        00:00:00 [scsi_tmf_0]
+root         250       2  0 May12 ?        00:00:00 [scsi_eh_1]
+root         253       2  0 May12 ?        00:00:00 [scsi_tmf_1]
+root         287       2  0 May12 ?        00:05:14 [irq/51-DELL0792]
+root         300       2  0 May12 ?        00:00:00 [rmi4-poller]
+root         301       2  0 May12 ?        00:02:42 [irq/128-i2c_hid]
+root         365       2  0 May12 ?        00:00:00 [raid5wq]
+root         419       2  0 May12 ?        00:00:18 [jbd2/sda3-8]
+root         420       2  0 May12 ?        00:00:00 [ext4-rsv-conver]
+root         471       1  0 May12 ?        00:00:16 /lib/systemd/systemd-journald
+root         487       2  0 May12 ?        00:00:00 [rpciod]
+root         488       2  0 May12 ?        00:00:00 [xprtiod]
+root         499       1  0 May12 ?        00:00:00 /usr/sbin/blkmapd
+root         516       2  0 May12 ?        00:00:00 [loop0]
+root         517       2  0 May12 ?        00:00:00 [loop1]
+root         518       2  0 May12 ?        00:00:00 [loop2]
+root         519       2  0 May12 ?        00:00:00 [loop3]
+root         522       2  0 May12 ?        00:00:00 [loop4]
+root         531       1  0 May12 ?        00:00:10 /lib/systemd/systemd-udevd
+root         533       2  0 May12 ?        00:00:00 [loop6]
+root         534       2  0 May12 ?        00:00:00 [loop7]
+root         535       2  0 May12 ?        00:00:00 [loop8]
+root         536       2  0 May12 ?        00:00:00 [loop9]
+root         537       2  0 May12 ?        00:00:00 [loop10]
+root         538       2  0 May12 ?        00:00:00 [loop11]
+root         539       2  0 May12 ?        00:00:00 [loop12]
+root         540       2  0 May12 ?        00:00:00 [loop13]
+root         618       2  0 May12 ?        00:00:00 [cfg80211]
+root         623       2  0 May12 ?        00:04:05 [irq/135-iwlwifi]
+root        1023       2  0 May12 ?        00:00:00 [kmemstick]
+root        1026       1  0 May12 ?        00:00:00 /usr/sbin/rpc.idmapd
+_rpc        1172       1  0 May12 ?        00:00:00 /sbin/rpcbind -f -w
+systemd+    1173       1  0 May12 ?        00:00:11 /lib/systemd/systemd-resolved
+systemd+    1174       1  0 May12 ?        00:00:00 /lib/systemd/systemd-timesyncd
+root        1181       1  0 May12 ?        00:00:05 /usr/lib/accountsservice/accounts-daemon
+root        1182       1  0 May12 ?        00:00:12 /usr/sbin/acpid
+avahi       1184       1  0 May12 ?        00:00:06 avahi-daemon: running [sdahal.local]
+root        1185       1  0 May12 ?        00:00:00 /usr/lib/bluetooth/bluetoothd
+message+    1187       1  0 May12 ?        00:14:03 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        1188       1  0 May12 ?        00:14:25 /usr/sbin/NetworkManager --no-daemon
+root        1195       1  0 May12 ?        00:00:20 /usr/sbin/irqbalance --foreground
+root        1197       1  0 May12 ?        00:00:19 /usr/lib/policykit-1/polkitd --no-debug
+syslog      1200       1  0 May12 ?        00:00:03 /usr/sbin/rsyslogd -n -iNONE
+root        1203       1  0 May12 ?        00:00:54 /usr/lib/snapd/snapd
+root        1204       1  0 May12 ?        00:00:00 /usr/libexec/switcheroo-control
+root        1206       1  0 May12 ?        00:00:05 /lib/systemd/systemd-logind
+root        1207       1  0 May12 ?        00:01:53 /usr/sbin/thermald --no-daemon --dbus-enable
+root        1208       1  0 May12 ?        00:00:24 /usr/lib/udisks2/udisksd
+root        1209       1  0 May12 ?        00:00:47 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi       1256    1184  0 May12 ?        00:00:00 avahi-daemon: chroot helper
+root        1330       1  0 May12 ?        00:00:31 /usr/bin/python3 -Es /usr/sbin/tuned -l -P
+root        1331       1  0 May12 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        1333       1  0 May12 ?        00:00:44 /usr/bin/containerd
+root        1341       1  0 May12 ?        00:00:01 /usr/sbin/ModemManager --filter-policy=strict
+root        1374       1  0 May12 ?        00:00:00 /usr/sbin/rpc.mountd --manage-gids
+root        1378       1  0 May12 ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        1379       2  0 May12 ?        00:00:00 [lockd]
+root        1400       2  0 May12 ?        00:00:00 [nfsd]
+root        1401       2  0 May12 ?        00:00:00 [nfsd]
+root        1402       2  0 May12 ?        00:00:00 [nfsd]
+root        1403       2  0 May12 ?        00:00:00 [nfsd]
+root        1404       2  0 May12 ?        00:00:00 [nfsd]
+root        1405       2  0 May12 ?        00:00:00 [nfsd]
+root        1406       2  0 May12 ?        00:00:00 [nfsd]
+root        1407       2  0 May12 ?        00:00:00 [nfsd]
+root        1409       1  0 May12 ?        00:00:00 /usr/sbin/cron -f
+root        1422       1  0 May12 ?        00:00:00 /usr/sbin/lightdm
+root        1430       1  0 May12 ?        00:00:00 /bin/sh /usr/bin/deepin-anything-tool-ionice --dbus
+root        1431    1430  0 May12 ?        00:13:57 deepin-anything-tool --dbus
+root        1592       1  0 May12 ?        00:01:41 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        1594       1  0 May12 ?        00:00:05 /usr/sbin/nmbd --foreground --no-process-group
+whoopsie    1596       1  0 May12 ?        00:00:00 /usr/bin/whoopsie -f
+kernoops    1600       1  0 May12 ?        00:00:19 /usr/sbin/kerneloops --test
+kernoops    1602       1  0 May12 ?        00:00:19 /usr/sbin/kerneloops
+root        1608       2  0 May12 ?        00:00:00 [iprt-VBoxWQueue]
+root        1609       2  0 May12 ?        00:00:00 [iprt-VBoxTscThr]
+root        1616    1422  3 May12 ?        02:38:57 /usr/lib/xorg/Xorg -background none :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt1 -novtswitch
+mysql       1626       1  0 May12 ?        00:23:02 /usr/sbin/mysqld
+root        1678       1  0 May12 ?        00:00:01 /usr/sbin/smbd --foreground --no-process-group
+root        1696    1678  0 May12 ?        00:00:00 /usr/sbin/smbd --foreground --no-process-group
+root        1697    1678  0 May12 ?        00:00:00 /usr/sbin/smbd --foreground --no-process-group
+root        1702    1678  0 May12 ?        00:00:00 /usr/sbin/smbd --foreground --no-process-group
+rtkit       1787       1  0 May12 ?        00:00:02 /usr/libexec/rtkit-daemon
+root        1838       1  0 May12 ?        00:03:54 /usr/lib/deepin-daemon/dde-system-daemon
+root        1856       2  0 May12 ?        00:00:00 [krfcommd]
+root        1903       1  0 May12 ?        00:00:16 /usr/lib/upower/upowerd
+root        1920       2  0 May12 ?        00:00:00 bpfilter_umh
+root        2293    1422  0 May12 ?        00:00:00 lightdm --session-child 12 21
+sdahal      2342       1  0 May12 ?        00:00:01 /lib/systemd/systemd --user
+sdahal      2344    2342  0 May12 ?        00:00:00 (sd-pam)
+sdahal      2356    2342  1 May12 ?        01:21:54 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+sdahal      2358    2342  0 May12 ?        00:00:01 /usr/libexec/tracker-miner-fs
+sdahal      2361    2342  0 May12 ?        00:03:51 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+sdahal      2364       1  0 May12 ?        00:00:03 /usr/bin/gnome-keyring-daemon --daemonize --login
+sdahal      2371    2293  0 May12 ?        00:05:33 /usr/bin/startdde
+sdahal      2382    2342  0 May12 ?        00:00:00 /usr/libexec/gvfsd
+sdahal      2387    2342  0 May12 ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/1001/gvfs -f -o big_writes
+sdahal      2390    2342  0 May12 ?        00:00:08 /usr/libexec/gvfs-udisks2-volume-monitor
+sdahal      2399    2342  0 May12 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+sdahal      2403    2342  0 May12 ?        00:00:00 /usr/libexec/goa-daemon
+sdahal      2410    2342  0 May12 ?        00:00:00 /usr/libexec/goa-identity-service
+sdahal      2425    2342  0 May12 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+sdahal      2429    2342  0 May12 ?        00:00:06 /usr/libexec/gvfs-afc-volume-monitor
+sdahal      2434    2342  0 May12 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+sdahal      2450    2342  0 May12 ?        00:00:00 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+sdahal      2601    2371  0 May12 ?        00:25:28 /usr/lib/deepin-daemon/dde-session-daemon
+sdahal      2631    2342  0 May12 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+sdahal      2636    2631  0 May12 ?        00:00:02 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+sdahal      2640    2371  0 May12 ?        00:07:59 /usr/bin/dde-dock
+sdahal      2650    2342  0 May12 ?        00:00:18 /usr/libexec/at-spi2-registryd --use-gnome-session
+sdahal      2659    2371  0 May12 ?        00:00:32 /usr/bin/dde-desktop
+sdahal      2661    2342  0 May12 ?        00:00:00 /usr/libexec/dconf-service
+sdahal      2696    2342  0 May12 ?        00:00:22 /usr/lib/x86_64-linux-gnu/bamf/bamfdaemon
+sdahal      2725    2342  0 May12 ?        00:00:10 /usr/bin/deepin-wm-dbus
+sdahal      2785    2342  0 May12 ?        00:00:14 /usr/bin/kglobalaccel5
+root        2840       2  0 May12 ?        00:00:00 [loop14]
+sdahal      2857       1  0 May12 ?        00:01:49 syndaemon -i 2 -K -t -d -p /tmp/syndaemon.pid
+sdahal      2875    2371  0 May12 ?        00:19:13 nm-applet
+sdahal      2913    2371  0 May12 ?        00:00:00 /usr/libexec/geoclue-2.0/demos/agent
+sdahal      2974    2371  0 May12 ?        00:00:14 /usr/lib/polkit-1-dde/dde-polkit-agent
+sdahal      3013    2371  0 May12 ?        00:00:03 zeitgeist-datahub
+sdahal      3030    2342  0 May12 ?        00:00:03 /usr/bin/zeitgeist-daemon
+sdahal      3067    2342  0 May12 ?        00:00:00 /usr/libexec/gvfsd-metadata
+sdahal      3070    2342  0 May12 ?        00:00:02 /usr/lib/zeitgeist/zeitgeist-fts
+sdahal      3091    2371  0 May12 ?        00:03:22 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+sdahal      3105    2342  0 May12 ?        00:00:10 /usr/lib/x86_64-linux-gnu/libexec/kactivitymanagerd
+sdahal      3118    2371  0 May12 ?        00:00:00 /bin/sh /usr/bin/kwin_no_scale
+sdahal      3122    3118  3 May12 ?        02:40:46 kwin_x11 -platform dde-kwin-xcb:appFilePath=/usr/bin/kwin_no_scale
+sdahal      3140    2371  0 May12 ?        00:00:06 update-notifier
+root        3955       2  0 May12 ?        00:00:17 [kworker/0:2H-kblockd]
+sdahal      4016    2342  0 May12 ?        00:06:21 /usr/bin/dde-control-center
+root        5124       1  0 May12 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+sdahal      5482    2371  1 May12 ?        01:03:06 /opt/google/chrome/chrome
+sdahal      5499    5482  0 May12 ?        00:00:00 cat
+sdahal      5500    5482  0 May12 ?        00:00:00 cat
+sdahal      5508    5482  0 May12 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+sdahal      5513    5508  0 May12 ?        00:00:00 /opt/google/chrome/nacl_helper
+sdahal      5516    5508  0 May12 ?        00:00:03 /opt/google/chrome/chrome --type=zygote
+sdahal      5544    5482  6 May12 ?        04:52:25 /opt/google/chrome/chrome --type=gpu-process --field-trial-handle=15948237761675888545,14123637357410137537,131072 --gpu-preferences=MAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA= --shared-files
+sdahal      5549    5482  0 May12 ?        00:20:06 /opt/google/chrome/chrome --type=utility --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --service-sandbox-type=network --disable-webrtc-apm-in-audio-service --shared-files
+sdahal      5575    5516  0 May12 ?        00:03:22 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --extension-process --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files
+sdahal      5592    5516  0 May12 ?        00:01:52 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --extension-process --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files
+sdahal      5593    5516  0 May12 ?        00:02:50 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --extension-process --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files
+sdahal      5683    5482  0 May12 ?        00:21:35 /opt/google/chrome/chrome --type=utility --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --service-sandbox-type=audio --disable-webrtc-apm-in-audio-service --shared-files
+sdahal      5961    2342  0 May12 ?        00:21:36 /usr/bin/dde-lock
+sdahal      5982    5961  0 May12 ?        00:00:36 /usr/bin/python3 /usr/bin/onboard -e --layout Small
+sdahal     10765    2342  0 May12 ?        00:00:12 /usr/bin/deepin-menu
+sdahal     20524    2342  0 May12 ?        00:00:44 /usr/bin/dde-launcher
+root       20675       1  0 May12 ?        00:00:00 dbus-launch --autolaunch 4214f280c04d4a25b0165e2432885fad --binary-syntax --close-stderr
+root       20676       1  0 May12 ?        00:00:00 /usr/bin/dbus-daemon --syslog-only --fork --print-pid 5 --print-address 7 --session
+root       20678       1  0 May12 ?        00:00:07 /usr/bin/kwalletd5
+root       20682       1  0 May12 ?        00:00:00 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+uuidd      20825       1  0 May12 ?        00:00:00 /usr/sbin/uuidd --socket-activation
+root       21723       2  0 May12 ?        00:00:05 [kworker/3:2H-kblockd]
+sdahal     21926    2364  0 May12 ?        00:00:00 /usr/bin/ssh-agent -D -a /run/user/1001/keyring/.ssh
+root       39062       2  0 May13 ?        00:00:00 [loop5]
+root       41853       2  0 May13 ?        00:00:12 [kworker/3:0H-events_highpri]
+sdahal     46491    5516  4 May13 ?        02:06:03 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=643 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     51878    5516  0 May13 ?        00:04:08 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=773 --no-v8-untrusted-code-mitigations --shared-files
+root       58770       2  0 May13 ?        00:00:11 [kworker/0:1H-events_highpri]
+sdahal     61296       1  0 May14 ?        00:02:47 /usr/share/code/code --no-sandbox .
+sdahal     61298   61296  0 May14 ?        00:00:00 /usr/share/code/code --type=zygote --no-sandbox
+sdahal     61321   61296  0 May14 ?        00:02:31 /usr/share/code/code --type=gpu-process --field-trial-handle=10767860443132058919,14706185891619442723,131072 --disable-features=LayoutNG,SpareRendererForSitePerProcess --disable-color-correct-rendering --no-sandbox --gpu-preferences=IAAAAAAAAAAgAAAgAAAAAAAAYAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --service-request-channel-token=17427728696586633154
+sdahal     61352   61296  0 May14 ?        00:07:25 /usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=10767860443132058919,14706185891619442723,131072 --disable-features=LayoutNG,SpareRendererForSitePerProcess --lang=en-GB --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/usr/share/code/resources/app --node-integration --webvi --no-sandbox --no-zygote --background-color=#1e1e1e --num-raster-threads=2 --enable-main-frame-before-activation --service-request-channel-token=17542767999182456334 --renderer-client-id=4 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+sdahal     61365   61296  0 May14 ?        00:00:28 /usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=10767860443132058919,14706185891619442723,131072 --disable-features=LayoutNG,SpareRendererForSitePerProcess --lang=en-GB --standard-schemes --secure-schemes=vscode-resource --bypasscsp-schemes --cors-schemes=vscode-resource --fetch-schemes=vscode-resource --service-worker-schemes --app-path=/usr/share/code/resources/app --node-integration --no-sandbox --no-zygote -- und-color=#1e1e1e --disable-blink-features=Auxclick --num-raster-threads=2 --enable-main-frame-before-activation --service-request-channel-token=16549701511590554845 --renderer-client-id=6 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100,v8_natives_data:101
+sdahal     61399   61352  0 May14 ?        00:00:27 /usr/share/code/code --inspect-port=0 /usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost
+sdahal     61406   61352  0 May14 pts/1    00:00:00 /bin/bash
+sdahal     61423   61352  0 May14 ?        00:00:03 /usr/share/code/code /usr/share/code/resources/app/out/bootstrap-fork --type=watcherService
+sdahal     63902    2382  0 May14 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+sdahal     63911    2382  0 May14 ?        00:00:00 /usr/libexec/gvfsd-network --spawner :1.3 /org/gtk/gvfs/exec_spaw/1
+sdahal     63941    2382  0 May14 ?        00:00:00 /usr/libexec/gvfsd-dnssd --spawner :1.3 /org/gtk/gvfs/exec_spaw/3
+sdahal     68659    2342  0 May14 ?        00:00:01 /usr/libexec/xdg-desktop-portal
+sdahal     68663    2342  0 May14 ?        00:00:00 /usr/libexec/xdg-document-portal
+sdahal     68666    2342  0 May14 ?        00:00:00 /usr/libexec/xdg-permission-store
+sdahal     68675    2342  0 May14 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gtk
+sdahal     68681   68659  0 May14 ?        00:00:00 sh -c /usr/lib/x86_64-linux-gnu/libproxy/0.4.15/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
+sdahal     68682   68681  0 May14 ?        00:00:00 /usr/lib/x86_64-linux-gnu/libproxy/0.4.15/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
+sdahal     69836    5516  1 May14 ?        00:24:13 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1019 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     70601    5516  1 May14 ?        00:23:57 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1055 --no-v8-untrusted-code-mitigations --shared-files
+root       74353       2  0 May14 ?        00:00:01 [kworker/u9:2-hci0]
+root       77560       2  0 May14 ?        00:00:01 [kworker/1:1H-events_highpri]
+root       82092       2  0 09:22 ?        00:00:00 [kworker/2:1H-kblockd]
+root       82161       1  0 09:22 ?        00:00:00 /usr/sbin/cupsd -l
+root       82162       1  0 09:22 ?        00:00:00 /usr/sbin/cups-browsed
+sdahal     83163    5516  0 09:25 ?        00:00:22 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1234 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     83262    5516  0 09:26 ?        00:00:02 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1238 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     83738    2371  0 09:33 ?        00:00:25 deepin-terminal
+sdahal     83752   83738  0 09:33 pts/0    00:00:01 /bin/bash
+root       84103       2  0 09:36 ?        00:00:00 [kworker/u9:1-rb_allocator]
+sdahal     85351    5516  0 10:07 ?        00:00:16 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1271 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     85380    5516  0 10:08 ?        00:00:27 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1273 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     85396    5516  0 10:08 ?        00:00:25 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1274 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     85439    5516  0 10:09 ?        00:00:01 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1276 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     85454    5516  0 10:09 ?        00:00:00 /opt/google/chrome/chrome --type=utility --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --service-sandbox-type=utility --disable-webrtc-apm-in-audio-service --shared-files
+sdahal     85459    5516  0 10:09 ?        00:00:02 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1278 --no-v8-untrusted-code-mitigations --shared-files
+sdahal     85472    5516  0 10:09 ?        00:00:01 /opt/google/chrome/chrome --type=renderer --disable-webrtc-apm-in-audio-service --field-trial-handle=15948237761675888545,14123637357410137537,131072 --lang=en-GB --disable-client-side-phishing-detection --enable-auto-reload --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=1279 --no-v8-untrusted-code-mitigations --shared-files
+root       85724       2  0 10:21 ?        00:00:00 [kworker/2:0H-kblockd]
+root       85746       2  0 10:22 ?        00:00:00 [kworker/1:2H-kblockd]
+root       85920       2  0 10:26 ?        00:00:00 [kworker/3:1-events]
+root       86604       2  0 10:49 ?        00:00:02 [kworker/1:1-events]
+root       86769       2  0 11:01 ?        00:00:00 [kworker/3:0-events]
+root       86901       2  0 11:11 ?        00:00:00 [kworker/2:0-events]
+root       86954       2  0 11:16 ?        00:00:00 [kworker/0:1-events]
+root       87177       2  0 11:21 ?        00:00:04 [kworker/1:2-events]
+root       87179       2  0 11:21 ?        00:00:00 [kworker/u8:10-i915]
+root       87182       2  0 11:21 ?        00:00:01 [kworker/u8:13-i915]
+root       87223       2  0 11:23 ?        00:00:01 [kworker/u8:53-i915]
+root       87228       2  0 11:23 ?        00:00:00 [irq/134-mei_me]
+root       87229       2  0 11:23 ?        00:00:00 [kworker/0:2-cgroup_destroy]
+root       87231       2  0 11:23 ?        00:00:00 [kworker/2:1-events]
+sdahal     87512    2342  0 11:23 ?        00:00:01 /usr/lib/deepin-daemon/dde-osd
+deepin-+   87639       1  0 11:23 ?        00:00:00 /usr/bin/deepin-anything-monitor
+deepin-+   87952       1  0 11:29 ?        00:00:00 /usr/lib/deepin-api/sound-theme-player
+sdahal     87967   83752  0 11:29 pts/0    00:00:00 ps -ef
