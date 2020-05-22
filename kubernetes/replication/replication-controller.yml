@@ -1,0 +1,29 @@
+version: 1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    tyoe: front-end
+spec:
+  template:
+    metadata:
+      name: my-app
+      labels:
+        app: myapp 
+        type: front-end
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          port:
+            - containerPort: 80
+        - name: database
+          image: mysql
+          port:
+            - containerPort: 3306
+        - name: cache
+          image: redis
+          port:
+            - containerPort: 5502
+  replicas: 3

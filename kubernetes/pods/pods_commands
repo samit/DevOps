@@ -1,0 +1,11 @@
+kubectl get pods  # list all pods 
+kubectl get pods -o wide # more detail view of pods
+kubectl describe pods nginx # more detail view of pods name nginx
+
+kubectl run pods nginx --image=nginx # run a pods with name nginx and base image nginx
+
+kubectl edit pods nginx  # to edit a pods 
+
+kubectl apply -f nginx.yml # apply the changes made in pods.
+
+

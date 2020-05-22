@@ -1,0 +1,22 @@
+version: v1
+kind: pods
+metadata:
+  name: my-app
+  labels:
+    app: myapp 
+    type: front-end
+spec:
+  containers:
+    - name: nginx-containers
+      image: nginx 
+      ports:
+        - containerPort: 80
+    - name: database-containers
+      image: mysql
+      ports:
+        - containerPort: 3306
+    - name: redis-containers
+      image: redis 
+      ports:
+        - containerPort: 5502
+      

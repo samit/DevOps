@@ -1,0 +1,32 @@
+version: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset
+  labels:
+    app: myapp-rs
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+        - name: db
+          image: mysql
+          ports:
+            - containerPort: 3306
+        - name: cache
+          image: redis
+          ports:
+            - containerPort: 5502
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end

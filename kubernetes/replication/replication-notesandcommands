@@ -1,0 +1,15 @@
+kubectl create -f replication-controller.yml
+kubectl describe replication-controller 
+kubectl get pods 
+kubectl get replicaset
+kubectl describe replicaset
+kubectl create -f replica-set.yml
+######
+to update the number of replicas in replicaset 
+first edit replica-set.yml for desired number of replica
+kubectl replace -f replica-set.yml
+kubectl scale replicas=6 -f replica-set.yml
+#####################
+first
+kubectl get replicaset  {get name}
+kubectl delete replica-set {replicasetname}
