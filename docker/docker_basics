@@ -1,0 +1,130 @@
+containers:
+Completely isolated environment where they can run their own process
+networks and mounts. But same os kernels.
+Docker utilizes lxc container(sysadmicast for lxc).
+Image vs container:
+Image is a package or template that are used to run container.
+Container is the running instance of images.
+###########################################
+Some of the docker command.
+docker run command  -> use to run the instance of an image 
+docker ps -> lsit all running containers.
+docker ps -a -> list all of the running and stopped container.
+docker stop containerid/container name  -> to stop docker container.
+docker rm containerid/containerid name  -> to remove container.
+docker images  -> list all available images downloaded from registery.
+docker image ls -a-> ""
+docker rmi imageid/image name  -> to remove image. To be able to delete image 
+you must stop container and remove container.
+docker pull image -> to download the image.
+docker exec conatiner name command(cat /etc/passwd) -> to execute a command on running container.
+docker run -d image-name -> run docker container in detach mode. 
+docker attach  name or id -> to run back in foreground.
+tag is seperated via colon:
+###################################################
+port mapping
+docker run  -p host_port:docker_port image_name.
+volume mapping
+docker run -v path_to_host:path_to_docker image_name
+docker run -v /opt/mysql:/var/lob/mysql   mysql
+docker inspect -> addtional details like vol, port mapping, networking.
+docker logs containerid/name -> to see the  logs.
+#############################################################################
+Create your own docker image:
+create docker file 
+docker built Dockerfile -t sdahal/my-webapp
+docker push sdahal/my-webapp -> to push registry
+##################################################################
+Dockerfile -> text file written with instruction or arguement format.
+instruction -> in capital format left portion
+arguement -> right to isntruction is arguement.
+FROM  ubuntu
+RUN sudo apt-get update
+RUN sudo apt-get install python
+RUN sudo apt-get install flask
+RUN sudo apt-get install flask-mysql
+COPY . /opt/web-app
+ENTRYPOINT FLASK_APP=/opt/web-app/app.py flask run
+############################################################
+COMMAND vs ENTRYPOINT
+container are designed for running a specific task or process, once the given task is completed
+the container stops.Therefore a container lifecycle depends on the ongoing process inside it.
+Dockerfile defines this process and there are two types of instructions that can define the 
+process running inside the container and they are CMD and ENTRYPOINT.
+CMD -> default commands or paramater for container. User can override the CMD instructions
+ENTRYPOINT -> is preferred when we want to use container with specific executables.
+can not override unless --entrypoint flag is added. 
+########################################################################################
+Docker-Compose:
+yml 
+build/image_name
+version 1, 2 3
+#####################################################
+
+Docker ENgine: refers to a host with docker installed on it.
+docker architecture consists of 
+docker cli -> cli interface to perform actions such as running a container etc.uses rest api to interact
+with docker deamon.
+rest API  -> is an API interface that program can used to talk to docker deamon and provide instructions.
+docker deamon -> background process that manages the docker objects such as
+images, containers, volumes and networks.
+
+Docker cli need not to be on same host and could be install on remote host.
+eg command docker -H=10.10.10.20:2375 run mysql
+
+Docker uses namespaces to isolate workspace.
+pid, ipc, netowrks, mounts unix timesharing are created in their own namespaces.
+
+docker uses cgroups or control groups to allocate the hardware resources.
+docker run --cpu=.5 mysql
+docker run --memory=100m nginx
+#####################################################################################
+Docker Storage and layered architecture:
+after installing docker on a system it creates folder structure on
+/var/lib/docker
+multiple foldeers namely containers, images, volumes, aufs.
+Laayered architecture:
+when docker builds images it builds in a layered architecture.
+Each line of instruction on the docker file creates a new layer with just the changes 
+from the previous layer.
+each layer only stores the changes from the previous layer.
+image layer -> read only can ony br modified by re building.
+when you run container using docker run than docker creates a 
+new layer on the top of image layer which is read/write. 
+Life of the container layer is as long as the conatiner is alive. 
+add persistant voldocker volume create data_vol ->  /var/lib/volume/data_vol
+docker run -v data_vol:/var/lob/mysql -d mysql.  vol mounting
+docker run -v data_vol2:/var/lib/musql -> /var/lib/docker/volume/data_vol2  vol mounting
+docker run -v /mnt/sql_data:/var/lib/mysql -> /mnt/sql_data   bind mounting.
+docker run --mount type=bind ,source=/mnt/data, target=/var/lib/mysql -d mysql.
+Docker uses storage driver to enable layered architecture.
+aufs, btrfs, overlay,zfs are example of storage driver. 
+
+#############################################################################
+Docker Networking:
+When docker is installed it create three networks automatically.
+Bridge -> default network a container get attached to.
+None  -> docker run --network=none -d mysql
+Host -> docker run --network=host -d mysql.
+docker networl ls 
+By default docker only creates a one internal network which is in 
+ip range 172.17.0.1
+if we wish to create a seperate internal network
+docker network create \
+--driver Bridge \
+--subnet 182.16.0.1 \
+custom-isolated-network
+
+Containers can reach each other using their names.
+docker uses embeded DNS 127.0.0.11
+this embeded DNS helps to resolve the host by using container name.
+docker uses network namespaces that create separate namespace for the containers and then 
+uses virtual ethernet pairs to connect containers together.
+
+##################################################################
+Docker registry:
+centroal repository for all docker images.
+
+######################################END##################################
+
+
