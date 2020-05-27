@@ -1,0 +1,242 @@
+Linux Boot Process 
+ BIOS/UEFI -> perfroms POST power on self test, and depending upon the boot order it select appro
+ priate disk to execute MBR. Hand over control to MBR
+
+ MBR-> 0 sector of boot drive.Stage 1 boot loader. MBR hands over control to other program call 
+ GRUB.
+
+ GRUB-> GRUB loads the kernal into memory.
+ KERNAL-> initliaze itself and loads the initramfs that is  initial RAM disk image.
+ initial Ram disk image contains temporary file system with loadable kernal modules that
+ are used to load the actual root file system pivot_root command is used to mount the root fs.
+ kernal than initializes schedular with a pid of 0
+ Kernal forks and execute process that is known 
+ as systemd(previously it was init d).
+ systemd ->system d than executes different user space proces and different scripts to bring the 
+ system on default state which is known as graphical.target.
+##########################################################################################
+User Groups and chage /etc/passwd/ /etc/shadow
+
+
+#################################################################################################
+ Process Management:
+ Process: Instance of a program running on the computer.
+ fork system call is used to create a process.
+ process has pid and can have parent or create a child procecss wusing same fork syscall.
+
+ Process contains: 
+ process Identification  Like PID, PPID, UID, SID, EUID execute
+ Process States: Running, Sleeping, Zombie.
+ process control information: 
+ Like when is the process created, 
+ How many files process has opened.
+ What is the resources associated with process.
+
+ Foreground process -> run on screen foreground may hold visual dispaly unit, keayboard.
+ background process -> run behind the screen.
+
+ some commands for process:
+ ps, ps -a, ps -u, ps -l read many
+ top command h for help
+ free command 
+ watch command 
+
+ each process has ppfdt per process file descriptor table.
+ 0 stdin
+ 1 stdout
+ 2 stderr 
+ from 2 to open_max -1 if process open any file.
+ getconf OPEN_MAX command to get max num of file that can be open by process.
+############################################################################################
+ IPC Data transfer using pipes and fifo
+ pipes unnamed pipes | two related process must be on same PC 
+ FIFOS named pipes  two unrelated process can communicate. Blocking in nature 
+ command to create fifo
+ mkfifo fifo1 
+ mknod fifo2 p 
+##############################################################################################
+ Linux find command to find files, dir, symbolic link, named pipes, charactor file, block file and socket
+ find . -type f 
+ find . -type d 
+ find . -type l 
+ find . -type p 
+ find . -type c 
+ find . -type b 
+ find . -type s 
+ ###################################################################
+ Linux Signals:
+ Linux signals are used by os to notify process an event has occured. 
+ in other words signals are software interrupt send by linux kernal to process
+ because a process did something.
+ did something:
+ 1) Process may access to illegal memory allocation. SIGSEGV 11
+ 3) Division by Zero SIGFPE  8
+ 4) process trying to execute illegal instruction SIGILL 4 
+ 5) process trying to write on the pipe whose other end is close by reader SIGPIPE 13
+
+when one process tries to tell other process something:
+for eg if the child process terminates the os kernel send the signal SIGCHLD(17) to parent process.
+User sends signal to process using keyboard combination.
+ctrl +c SIGINT 2
+ctrl / SIGQUIT 3
+ctrl z SIGTSTP 20
+
+command to see signal kill -l 
+31 standard signal  SIG starts with 
+33 real time signal SIGRT
+trap command for handling signal trap '' 2
+SIGKILL and SIGSTOP (13, 19) can not be catchable.
+#####################################################################################
+Hard and Soft link
+Links are used for sharing a file in multi user systems.
+hard Links:
+Command -> ln f1 ln2f1
+The Inode value remains same for hard link.
+Access time, Modified Time, Change time remains same
+Link count will be incremented.
+Can not be created across the directory or accross partations
+data ca still be acceible if we remove original file.
+
+Soft Link :
+command ln -s f2 sl2f2
+        ln -s dir1 dir2
+can be create across the directory.
+if we remove original file we can to get data.
+different inode number for soft link.
+soft link is a link represent with link l 
+permission on soft link is irrevelant original permision of file is applied.
+
+##################################################################################
+permission in Files some command and default permission chown, chmod  and umask
+for dir execute permission is you can cd to dir 
+dir contains inode and name. read and write permission to dir is meaning less untill you
+give execute permission to dir. 
+ ls -l first col you see permission(rwxrwxrwx)
+r = 4
+w = 2
+x = 1
+chmod is use to set permission to file.
+chown command to change the ownership of file.
+to change the group ownership of file1 to group1  we use chgrp grp1 file1
+default permission of file  are set based on umask value.
+basicall open(-,-,mode) syscall is used to create file.
+default permission is = mode &(bitwise anding) not of umask.
+                        0666 & ~ 0002
+                        0666 & 7775
+                        0664
+for directory default permission:
+ syscall mkdir(-,-,mode)
+        default permission = mode & ~umask & 0777
+                              0777 &~0002 &0777
+                              0777& 7775 & 0777 
+                              0775
+uing -m option you can specify permission on dir
+mkdir -m 777 acceible
+#################################################################################
+Special file permission suid, sgid and sticky bit.
+suid bit is set for the executable program and if set the Effective user id will be the 
+owner of that program. suid has no meaning on directories
+chmod u+s file  in ls -l you can see S(if owner does not have execute permission) or s
+find / -perm /4000  2 > /dev/null
+Like suid SGID is also use for the executable file where if set Effective group id  will
+be the group owner of this program. SGID has meaning on directories.
+If SGUD is set any file created under that directory have group membership of that file. 
+
+chmod g+s file 
+find / -perm /2000 2 >dev/null
+
+StickyBit: if set only the owner can delete that file. represent by t in the execute field of 
+others permission.
+
+chmod o+t file remove chmod o-t file
+find / -perm /1000 2 /dev/null
+###########################################################################################
+Linux ACL set facl and get facl 
+Linux acl provides discretionary access control on files and directories.
+getfacl file1
+setfacl -m u:username:rwx 
+setfacl -m g:groupname:rwx
+setfacl -x u:username:x //removes execute
+setfacl -x g:groupname:x
+
+###############################################################################
+device file block and charactor file in Linux:
+device file have major number and minor number.
+Major Number -> specifies the driver program 
+Minor Number ->  minor number is used by the driver to identify the instance
+
+charactor special file represent hardware device that read or writes serial streams of data.
+normally unbuffered devices and are connected via serial or parellel port.eg terminal
+block special file represent hardware devices that read or writes in a fixed size of block.
+normally buffered device and provide random access of data. eg hard disk.
+ mknod sdahal c 7  1
+ mknod sdahal1 b 7 1
+ #########################################################################################
+Task Scheduing 
+user use crontab -e, crontab -l and crontab -r edit, list, remove
+minutes(1-59), hour(0-23), day of month(1-30), month of year(1-12), day of week 0 sunday 1 monday --6 saturday
+cron.daily. weekly, monthly, hourlt /etc/
+user crontab file are /var/spool/cron/crontab 
+cron.allow by default does not exist but if present only user define on cron.allow can use cron job
+cron.deny exist by default and if we add any user to cron.deny than user defined can not use cron job
+#############################################################################################
+LVM and /etc/fstab entry 
+terminology:
+Physical volume individual partations pv
+volume group: combine physical volume together. vg
+Logical volume:used any space from volume group and use file system and mounted  lv
+
+rpmquery lvm2, yum install -y lvm2
+
+fdisk /dev/sdb
+n ->l 
+t -> 8e
+p, w 
+
+pvcreate /dev/sdb1
+pvs 
+vgcreate vgone /dev/sdb1
+vgextend vgone /deb/sdb2
+vgdisplay or vgscan
+
+lvcreate -L 750M -n LVONE vgone 
+lvscan 
+mkfs.xfs /dev/vgone/lvone 
+blkid 
+used uuid to mount in /etc/fstab 
+to increase size 
+lvextend -L +900M /dev/vgone/LVONE 
+lvresize -r -L  +50M /dev/vgone/LVONE
+lvresize -r -l 100 /dev/vgone/LVONE 
+############################################################################################
+NTP protocol
+NTP gets the time from local time provider and set the time accordingly. 
+ntp daemon can function as time provider and time consumer.
+port 123 
+
+Ntpd time provider  ------------------------------------- 
+ntpd time consumer sends time sync request to ntpd provider 
+ntpd provider send its time to consumer and time is updated on acc to ntp algorithm.
+Time is not set immediately gradually adjust until time is sync.
+ntp concepts:
+Stratum1 
+  |
+ stratum 2
+   |
+   stratum3 
+      | 
+      my PC stratum 2 or 3 
+stepping: every once a minutes
+slewing: once in every 17 minutes once synce is happening. time diff is less than 128ms 
+insane time : time diff is more than 17 minutes than insane.
+drift: diff in time due to system clock frequency   
+jitter: diff bet provider and consumer
+/etc/ntp.conf
+
+ntpdate pool.ntp.org   
+ntptrace
+ntpq -p                             
+###############################################################################################
+FTP and SSH 
+
+
