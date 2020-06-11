@@ -1,5 +1,5 @@
-version: v1
-kind: pods
+apiVersion: v1
+kind: Pod
 metadata:
   name: my-app
   labels:
