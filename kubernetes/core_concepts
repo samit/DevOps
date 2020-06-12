@@ -1,0 +1,8 @@
+Pods:
+Scheduler:
+Controller manager:
+Rest API: 
+Kubelet:
+container runtime: 
+kube proxy:
+

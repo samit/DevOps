@@ -1,0 +1,6 @@
+kubectl get deployment
+kubectl create deployment httpd --image=nginx
+kubectl describe deployment httpd
+kubectl apply -f deployment.yaml
+kubectl delete deployment httpd
+
