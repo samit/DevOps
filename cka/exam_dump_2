@@ -1,0 +1,31 @@
+Practice Example Question Dump -2:
+— create a namespace <name>0830 and perform the following tasks.
+— for each task create a spec file and save it in the homedirectory/namespace
+as spec.p<num>
+— — — — —
+1. Create a pod redis version 5.0-rc4-alpine named “mycache”
+2. Upgrade the pod to use 5.0-rc-alpine and save the pod spec as p2
+along with the command used.
+3. Create a config map from file /var/lib/kubelet/config.yaml
+and create a nginx pod that sees the configmap as a volume in the same path within the container,
+assign port 80 and expose it as a service “webservice” as well. The pod should be named “web”
+4. Create a busybox container that sleeps 60000, named “mybox”.
+5. Attach liveness probe to the container and restart if environment USER is null or undefined.
+Report pod status after attaching liveness probe.
+6. Pass ENV variables “USER” and “SECRET”
+from a secret “boxsecret” defined already that has these initialized as “bob”/”somesupersecret”
+7. Attach resource requests and limits for cpu and memory at 10m/10m and 100m/1000M
+for “mybox” pod above.
+8. Create a pv named “yourname-volume” that maps to hostpath “/opt/volume/yourname/” as 100G capacity, and
+policy reclaim.
+9. Create a deployment “myvolume” for memcached that get a 1G volume mapped from
+yourname-volume at /opt/myvolume
+10. Scale the deployment to have 2 replicas.
+11. Update myvolume deployment to have 1.5.10-alpine image on all replicas.
+12. Setup a init container in myvolume deployment to init a file in the mapped volume
+/opt/myvolume/config.yaml before the real memcached kick starts.
+13. Monitor pod lifecycle and log messages when pod/container starts/stops.
+14. Create a multi-container pod with nginx, memcached, redis all sharing the
+volume mount at /opt/myvolume with a 1G claim from your earlier pv created.
+15. List all objects in your namespace that has label “ques=p5”
+Find all pods that are serviced by your webservice.

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-cache
+  labels:
+    app: web-cache
+    type: caching
+spec:
+  template:
+    metadata:
+      labels:
+        app: web-cache
+        type: caching
+    spec:
+      container:
+        - name: web-cache
+          image: redis
+          ports:
+            - name: redis-cache
+              containerPort: 6379
+  replicas: 3
+  selector:
+    matchLabels:
+      type: caching
+    

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    app: web
+    type: front-end
+spec:
+  containers:
+    - name: web
+      image: nginx:1.11.9-alpine
+      ports:
+        - name: http
+          containerPort: 80
+        - name: https
+          containerPort: 443
+        
+  
