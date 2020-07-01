@@ -58,6 +58,7 @@ if __name__ == '__main__':
     subnet_cidr = '192.168.1.0/24'
     vpcid = vpc.id
     subnet_id = ec2.create_subnet(subnet_cidr, vpcid)
+    print(subnet_id)
     dest_cidr_block = '0.0.0.0/0'
     route_table = ec2.create_route_table(vpc, dest_cidr_block, igw)
     pprint(route_table)

@@ -14,15 +14,11 @@ from botocore.exceptions import ClientError
 class Dynamodb:
     """ A demo class implementation that one can use to perform CRUD operation on Dynamo DB Table """
 
-    def __init__(self, resource):
-        self.resource = resource
-
-    def get_resource(self):
-        dynamodb = boto3.resource(self.resource)
-        return dynamodb
+    def __init__(self):
+        self.ec2 = boto3.resource('dynamodb')
 
     def create_table(self, tablename):
-        db = self.get_resource()
+        db = self.ec2
         table = db.create_table(
             TableName=tablename,
             KeySchema=[
@@ -56,7 +52,7 @@ class Dynamodb:
 
     def put_item_in_table(self, tablename):
         """ Function that writes data to DynamoDB table """
-        db = self.get_resource()
+        db = self.ec2
         table = db.Table(tablename)
         with open('users.json', 'r') as user_data:
             records = json.load(user_data)
@@ -76,12 +72,12 @@ class Dynamodb:
 
         return response['Item']
 
-    def get_product(self, tablename, uname, lname):
+    def get_item(self, tablename, uname, lname):
         """Function that query DB table based on supplied Key"""
-        db = self.get_resource()
+        db = self.ec2
         table = db.Table(tablename)
         response = table.get_item(
-            Key = {
+            Key={
                 "username": uname,
                 "last_name": lname
             }
@@ -90,15 +86,15 @@ class Dynamodb:
 
     def update_item_and_add_new_attr(self, tablename, uname, lname, age, sex):
         """Function that update and add new entry to existing table """
-        db = self.get_resource()
+        db = self.ec2
         table = db.Table(tablename)
         response = table.update_item(
-            Key = {
+            Key={
                 "username": uname,
                 "last_name": lname
             },
-            UpdateExpression = "SET age = :val1, sex = :val2",
-            ExpressionAttributeValues = {
+            UpdateExpression="SET age = :val1, sex = :val2",
+            ExpressionAttributeValues={
                 ':val1': age,
                 ':val2': sex
             }
@@ -107,10 +103,10 @@ class Dynamodb:
 
     def delete_table_item(self, tablename, uname, lname):
         """ Function that perfroms delete operations on table  """
-        db = self.get_resource()
+        db = self.ec2
         table = db.Table(tablename)
         response = table.delete_item(
-            Key = {
+            Key={
                 "username": uname,
                 "last_name": lname
             }
@@ -119,7 +115,7 @@ class Dynamodb:
 
 
 if __name__ == '__main__':
-    db = Dynamodb('dynamodb')
+    db = Dynamodb()
     print("creating table user")
     tablename = 'users'
     user_table = db.create_table(tablename)
@@ -127,9 +123,9 @@ if __name__ == '__main__':
     print(db.put_item_in_table(tablename))
     uname = "sdahal"
     lname = "Dahal"
-    pprint(db.get_product(tablename,uname,lname))
+    pprint(db.get_item(tablename, uname, lname))
     age = '16'
     sex = "M"
-    pprint(db.update_item_and_add_new_attr(tablename,uname,lname,age,sex))
-    pprint(db.get_product(tablename,uname,lname))
-    pprint(db.delete_table_item(tablename,uname,lname))
+    pprint(db.update_item_and_add_new_attr(tablename, uname, lname, age, sex))
+    pprint(db.get_item(tablename, uname, lname))
+    pprint(db.delete_table_item(tablename, uname, lname))
