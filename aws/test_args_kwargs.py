@@ -18,4 +18,6 @@ if __name__=='__main__':
     t = Test()
     item = ['a', 'b','c']
     print(t.take_list(item))
-    print(t.take_dict(a='5',b='7'))
+    my_dict = {"name":"Sanjaya", "surname":"Dahal", "age":36}
+    res = t.take_dict(my_dict=my_dict)
+    print(res)

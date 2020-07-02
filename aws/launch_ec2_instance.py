@@ -45,8 +45,8 @@ if __name__ == '__main__':
     MaxCount = 1
     InstanceType = 't1.micro'
     KeyName = 'my_first_key'
-    SubnetId = 'subnet-04243a4fc17d9d45d'
-    SecurityGroupIds = ['sg-00cd7972a25596141',]
+    SubnetId = 'subnet-006278503c676ebb5'
+    SecurityGroupIds = ['sg-0f4f66a1a8a59b97b',]
     UserData ='''#!/bin/bash
     yum update -y
     yum install python3 -y
