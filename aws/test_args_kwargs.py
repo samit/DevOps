@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+import json
 class Test:
 
     def testing(self):
@@ -11,7 +11,7 @@ class Test:
             return (item, st)
     
     def take_dict(self,**kwargs):
-        return [kwargs]
+        print(kwargs['my_dict']['AlarmName'])
     
 
 if __name__=='__main__':
@@ -19,5 +19,7 @@ if __name__=='__main__':
     item = ['a', 'b','c']
     print(t.take_list(item))
     my_dict = {"name":"Sanjaya", "surname":"Dahal", "age":36}
-    res = t.take_dict(my_dict=my_dict)
-    print(res)
+    with open('cloudwatch.json', 'r') as cwfile:
+        records = json.load(cwfile)
+    t.take_dict(my_dict=records)
+    

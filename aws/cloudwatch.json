@@ -1,0 +1,22 @@
+
+    {
+        "AlarmName": "Application Server CPU Utilization",
+        "ComparisonOperator": "GreaterThanThreshold",
+        "EvaluationPeriods": 1,
+        "MetricName": "CPU Utilization",
+        "Namespace": "AWS/EC2",
+        "Period": 60,
+        "Statistic": "Average",
+        "Threshold": 75,
+        "ActionsEnabled": true,
+        "AlarmActions": [
+            "arn:aws:swf:ap-southeast-2:{YOUR_ACCOUNT}:action/actions/AWS_EC2.InstanceId.Reboot/1.0"
+        ],
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "Application_Server_instance_id"
+            }
+        ],
+        "Unit": "Seconds"
+    }
