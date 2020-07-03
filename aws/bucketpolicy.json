@@ -1,0 +1,16 @@
+{
+    "Version": "2020-07-03",
+    "Id": "",
+    "Statement": [{
+        "Effect": "Allow",
+        "Principal": {"AWS": "arn:aws:iam::555566667777:user/sdahal"},
+        "Action": [
+            "s3:GetObject",
+            "s3:ListBucket"
+        ],
+        "Resource": [
+            "arn:aws:s3:::sdahalbuckets/*",
+            "arn:aws:s3:::sdahalbuckets"
+        ]
+    }]
+}

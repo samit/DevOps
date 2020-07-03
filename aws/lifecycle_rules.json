@@ -1,0 +1,11 @@
+[{
+    "ID": 12346,
+    "Filter": {
+        "And": {
+            "Prefix": "sdahalbuckets/",
+            "Tags": [{"Key": "type", "Value": "my-firstbucket"}]
+        }
+    },
+    "Status": "Enabled",
+    "Expiration": {"Days": 28}
+}]
