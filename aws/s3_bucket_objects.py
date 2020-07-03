@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import boto3
 from botocore.exceptions import ClientError
-
+import json
 
 class AwsS3:
     def __init__(self, region):
@@ -49,7 +49,7 @@ class AwsS3:
         except ClientError as e:
             return e
 
-    def set_acl_for_log_delevery_group(self, **aclpolicy):
+    def set_acl_for_log_delevery_group(self,bucket_name, **aclpolicy):
         """ To grant access to Amazon S3 to write server access logs to the bucket, 
             under S3 log delivery group, choose Log Delivery.
             If a bucket is set up as the target bucket to receive access logs, 
@@ -59,7 +59,17 @@ class AwsS3:
             for the target bucket that you choose to receive the logs.  """
 
         try:
-            pass
+            acl = self.s3.Bucket(bucket_name).Acl()
+            grants = acl.grants if acl.grants else[]
+            grants.append(aclpolicy['myaclpolicy'])
+            acl.put(
+                AccessControlPolicy = {
+                    "Grants": grants,
+                    "Owner": acl.owner
+                }
+            )
+            print("Sucessfully updated acl for log delevery group for bucket %s", bucket_name)
+            return self.s3.Bucket(bucket_name).Acl()
         except ClientError as e:
             return e
 
@@ -69,4 +79,12 @@ if __name__ == '__main__':
     bucket = s3.create_bucket('sdahalbuckets', 'ap-southeast-2')
     print(bucket)
     print(s3.list_s3_bucket())
+    s3.upload_file_to_s3('sdahalbuckets', 'users.json')
+    s3.get_acl_for_s3bucket('sdahalbuckets')
+    with open('s3aclpolicy.json', 'r') as policyfile:
+        records = json.load(policyfile)
+    policy  = s3.set_acl_for_log_delevery_group('sdahalbuckets',myaclpolicy=records)
+    print(policy)
     s3.delete_bucket('sdahalbuckets')
+
+
