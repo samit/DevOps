@@ -40,7 +40,7 @@ public class SignupTest extends BaseTestSuite {
 
 	}
 
-	/*@Test
+	@Test
 	void SignUpUniqEmailTest() {
 		HomePage homePage = new HomePage(driver);
 		SignUpPage signup = homePage.clickSignupPage();
@@ -66,6 +66,6 @@ public class SignupTest extends BaseTestSuite {
 		register.setMobilePhone("1234567890");
 		register.clickSubmit();
 
-	} */
+	} 
 
 }

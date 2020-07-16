@@ -89,12 +89,6 @@ public class CartTest extends BaseTestSuite {
 		CartPage cartPage = homePage.emptyCart();
 		Assertions.assertEquals("Your shopping cart is empty.", cartPage.emptyCartPage());
 	}
-	/*@Test
-	public void deleteProductQtyTest() {
-		HomePage homePage = new HomePage(driver);
-		CartPage cartPage = homePage.clickCart();
-		
-		
-	}*/
+
 	
 }
